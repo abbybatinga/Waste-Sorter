@@ -1,0 +1,98 @@
+body {
+    background-color: #469C60;
+}
+
+#heading{
+    text-align:center;
+    margin-top: 20px;
+    margin-bottom:0px;
+}
+
+#heading h1 {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 60px;
+}
+
+#instructions {
+    text-align:center;
+    position:relative;
+    bottom:25px;
+}
+
+#instructions p {
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    
+    font-size: 20px;
+}
+
+
+.upload {
+    position: absolute;
+    background-color:#013F89;
+    left:27%;
+    top: 72%;
+    width: 170px;
+    height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:17px;
+    color: white;
+    border:none;
+    border-radius:10px;
+}
+
+.takePic {
+    position: absolute;
+    background-color:#013F89;
+    left:53%;
+    top: 72%;
+    width: 170px;
+    height: 35px;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border:none;
+    border-radius:10px;  
+}
+
+#canvas {
+    background:transparent;
+    border: none;
+}
+
+.webcam-container {
+    height: 480px;
+    width: 640px;
+    background-color:black;
+    margin-left: 120px;
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+
+.file-upload {
+    position: absolute;
+    background-color:#013F89;
+    left:27%;
+    top: 72%;
+    width: 170px;
+    height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    font-size:17px;
+    color: white;
+    border:none;
+    border-radius:10px;
+}
+
+#upload {
+    margin-top:5%;
+}
+
+#output {
+    margin-left: 20px;
+}

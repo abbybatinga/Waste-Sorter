@@ -1,0 +1,60 @@
+<html>
+
+<head>
+
+<!---Link CSS style sheet-->
+<link rel="stylesheet" href="style.css">
+
+<!---Google fonts--->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <div id="heading">
+        <h1>WASTE SORTER</h1>
+
+       
+    </div>
+
+    <div id="instructions">
+        <p>Simply upload or take an image of the waste you'd like to sort!</p>
+    </div>
+
+
+    <!--Buttons-->
+    <!-- <button class="upload" id="upload">UPLOAD IMAGE</button> -->
+    <button class="takePic" id="takePic">TAKE PICTURE</button>
+    
+
+    <!--Webcam display-->
+    <div id= "webcam-container" class="webcam-container">
+        <video id="webcam" autoplay playsinline width="640" height="480">
+        </video>
+        <!-- <img id="photo" alt="Screen capture will appear here"> -->
+        <canvas id="canvas"></canvas>
+    </div>
+
+
+    
+    <script src="script.js"></script>
+    <!--Allow for image uploads-->
+    <label class="file-upload">
+        
+        <input type = 'file' accept='image/*' onchange="openFile(event)"/>
+        <div id = "upload">
+            UPLOAD PICTURE
+        </div>
+        <img id="output">
+    </label>
+    
+</body>
+
+
+
+</html>
