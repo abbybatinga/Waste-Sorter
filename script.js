@@ -59,14 +59,15 @@ var openFile = function(ev) {
         
         // Display image from reader
         output.src = dataURL;
-        output.style.display = "none";
+        // output.style.display = "none";
         webcam.style.display = "none";
-        output.width = width;
-        output.height = height;
+        // output.width = width;
+        // output.height = height;
         canvas.width = width;
         canvas.height = height;
+        context.fillRect(0, 0, canvas.width, canvas.height);
         context.drawImage(output, 0, 0, width, height);
+        console.log(output);
     }
     reader.readAsDataURL(input.files[0]);
 }
-
