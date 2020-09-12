@@ -49,25 +49,22 @@ function clearPhoto() {
 
 
 // Display uploaded image
-var openFile = function(ev) {
-    var input = ev.target;
+var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+var ctx = canvas.getContext('2d');
+
+
+function handleImage(e){
     var reader = new FileReader();
-    reader.onload = function() {
-        var dataURL = reader.result;
-        var output = document.getElementById('output');
-        var context = canvas.getContext('2d');
-        
-        // Display image from reader
-        output.src = dataURL;
-        // output.style.display = "none";
-        webcam.style.display = "none";
-        // output.width = width;
-        // output.height = height;
-        canvas.width = width;
-        canvas.height = height;
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(output, 0, 0, width, height);
-        console.log(output);
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+            canvas.width = width;
+            canvas.height = height;
+            webcam.style.display = "none";
+            ctx.drawImage(img,0,0, canvas.width, canvas.height);
+        }
+        img.src = event.target.result;
     }
-    reader.readAsDataURL(input.files[0]);
+    reader.readAsDataURL(e.target.files[0]);     
 }
